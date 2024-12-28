@@ -349,7 +349,7 @@ body {
   
   .cd-container {
     width: 20rem; /* Adjust size as needed */
-    height: 25rem;
+    height: 20rem;
     border-radius: 50%;
     overflow: hidden;
   }
