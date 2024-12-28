@@ -1,12 +1,12 @@
 <div class="container-fluid m-0 my-2">
     <div class="row m-0 p-0">
         @if (audioIncrement != 3) {
-        <div class="col-12 m-0 p-0 mb-3 mt-5">
+        <div class="col-12 m-0 p-0">
             <!-- @for(audio of audioDetails ; track $index){ -->
             <div class="col-12 d-flex  justify-content-center align-items-center">
                 <div class="cd-container" style="height: 20rem;">
                     <img class="card-img" [src]="audioDetails[audioIncrement].cover" alt="movie">
-                </div>
+                </div> 
             </div>
             <div class="detail col-11 px-3 pt-5">
                 <div class="d-flex  justify-content-center align-items-center name"><b>
