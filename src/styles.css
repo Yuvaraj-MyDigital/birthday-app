@@ -348,8 +348,8 @@ body {
   
   
   .cd-container {
-    width: 20rem; /* Adjust size as needed */
-    height: 20rem;
+    width: 15rem; /* Adjust size as needed */
+    height: 15rem;
     border-radius: 50%;
     overflow: hidden;
   }
