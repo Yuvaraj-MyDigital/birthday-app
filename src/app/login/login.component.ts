@@ -21,7 +21,7 @@ export class LoginComponent {
  login(){
   let login_result = this.auth.login(this.username,this.password);
   if(login_result == 200){
-    this.router.navigate(['home'])
+    this.router.navigate(['happy-birthday-jo-sweetie'])
   }else if(login_result == 403){
     this.error_msg = "Not So Sweet Jo";
   }

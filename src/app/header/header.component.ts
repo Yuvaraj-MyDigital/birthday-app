@@ -12,7 +12,7 @@ import { AuthService } from '../services/auth.service';
 export class HeaderComponent {
   constructor(private route:Router,private auth:AuthService){}
   goToHome(){
-    this.route.navigate(['home']);
+    this.route.navigate(['happy-birthday-jo-sweetie']);
   }
   logout(){
     this.auth.logout;
