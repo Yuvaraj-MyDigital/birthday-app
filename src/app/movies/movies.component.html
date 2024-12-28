@@ -1,0 +1,71 @@
+<div class="container-fluid m-0 my-2">
+    <div class="row m-0 p-0">
+        @if (audioIncrement != 3) {
+        <div class="col-12 m-0 p-0 mb-3 mt-5">
+            <!-- @for(audio of audioDetails ; track $index){ -->
+            <div class="col-12 d-flex  justify-content-center align-items-center">
+                <div class="cd-container">
+                    <img class="card-img" [src]="audioDetails[audioIncrement].cover" alt="movie">
+                </div>
+            </div>
+            <div class="detail col-11 px-3 pt-5">
+                <div class="d-flex  justify-content-center align-items-center name"><b>
+                        <p class="mx-auto" style="font-size: 1.5rem;"> {{audioDetails[audioIncrement].name}}</p>
+                    </b>
+                </div>
+            </div>
+            <div class="col-12 py-2">
+                <div class="d-flex  justify-content-center align-items-center py-2">
+                    <audio #audioControl id="audioControl" (timeupdate)="updateTime()" class="h-0 w-0 m-0 p-0" controls
+                        hidden>
+                        <source [src]="audioDetails[audioIncrement].url" />
+                    </audio>
+                </div>
+                <div class="time-bar-container">
+                    @if(currentTime){
+                    <span>{{ formatTime(currentTime) }}</span>
+                    } @else{
+                    <span>00:00</span>
+                    }
+                    <input type="range" min="0" [max]="duration" [value]="currentTime" (input)="onSeek($event)"
+                        class="time-bar" />
+                    @if (duration) {
+                    <span>{{ formatTime(duration) }}</span>
+                    }
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center py-2">
+                <button class="nav-button" (click)="playpreviousAudio()">
+                    <span class="chevron-left"></span>
+                </button>
+                <button class="play-button" (click)="togglePlayPause()">
+                    <span class="play-icon" *ngIf="!isPlaying"></span>
+                    <span class="pause-icon" *ngIf="isPlaying">
+                        <div></div>
+                        <div></div>
+                    </span>
+                </button>
+                <button class="nav-button" (click)="nextAudio()">
+                    <span class="chevron-right"></span>
+                </button>
+            </div>
+            <!-- } -->
+        </div>
+        }
+        @else {
+        <div class="d-flex justify-content-center align-items-center ">
+            <div class="d-flex justify-content-center align-items-center ">
+                <video #videoControl id="videoControl" controls>
+                    <source src="assets/birthday/InShot_20241228_134315424.mp4" />
+                </video>
+            </div>
+        </div>
+
+        }
+
+    </div>
+</div>
+<footer class="footer">
+    <p class="footer-text">Happy Birthday, Joshika! 💖</p>
+</footer>

@@ -1,0 +1,20 @@
+<div class="row justify-content-center align-items-center full-screen-container p-0 m-0">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="login-form">
+            <form action="" class="bg-body rounded p-4">
+                <h4 class="text-center mb-4">Welcome Back, <span class="username-highlight">Joshika</span></h4>
+                <p class="text-center mb-4 welcome-message">Please log in to access your special space.</p>
+                <div class="mb-3">
+                    <p class="username-highlight text-center text-danger font-italic"><b>{{ error_msg }}</b></p>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control rounded-0" placeholder="Enter Your Username" name="username" [(ngModel)]="username">
+                </div>
+                <div class="mb-3">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" class="form-control rounded-0" placeholder="Enter Your Password" name="password" [(ngModel)]="password">
+                </div>
+                <button type="submit" class="btn btn-primary rounded-0 w-100" (click)="login()">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

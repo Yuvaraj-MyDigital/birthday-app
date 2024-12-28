@@ -1,0 +1,20 @@
+<b><h6 class="ms-1 text-warning">| {{movieType}} MOVIES</h6></b>
+<div class="d-flex p-0 m-0">   
+        @for(movie of movielist ; track $index){
+            <div class="col-2 mx-1 rounded m-0 card border-0 p-0  shadow-sm">
+            <div class="cover img-thumbnail border-0 px-2">
+                
+                <img class="card-img" [src]="movie.cover" alt="movie">
+            </div>
+            <div class="detail col-11 px-2 py-2">
+                <div class="name"><b> {{movie.name}}</b></div> 
+                 <div class="rating">{{movie.rating}}</div>
+            </div> 
+        </div>
+        }
+</div>
+
+
+
+
+

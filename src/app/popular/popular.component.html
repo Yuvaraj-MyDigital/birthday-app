@@ -1,0 +1,18 @@
+<div class="mt-3 ms-5 ">
+    <b>
+        <h6 class="ms-1 text-warning">| POPULAR MOVIES</h6>
+    </b>
+            <div class="m-0 p-0 shadow-sm rounded">
+                @for(movie of popularMovies; track $index){
+                    <div class="py-1 rounded m-0 movies-box">
+                        <div class="detail px-1 ms-2">
+                            <div class="name">
+                                <b>  {{movie.name}}</b>
+                            </div>
+                              
+                            <div class="rating ms-2">{{movie.rating}}</div>
+                        </div>
+                    </div>
+                    }
+            </div>
+</div>
